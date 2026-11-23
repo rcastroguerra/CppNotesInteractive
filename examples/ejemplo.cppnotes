@@ -1,0 +1,26 @@
+{
+  "panels": [
+    {
+      "id": "text_1",
+      "type": "text",
+      "text": "Notas de ejemplo con paneles mezclados.\n\n- El primer panel de código es C++ y suma dos números leídos por teclado.\n- El segundo panel de código es C puro (gcc) y multiplica dos números.\n\nPuedes ejecutar cada panel con su botón \"Ejecutar\", o todos a la vez con \"Ejecutar todos\"."
+    },
+    {
+      "id": "code_1",
+      "type": "code",
+      "language": "cpp",
+      "code": "#include <iostream>\n\nint main() {\n    int a, b;\n    std::cout << \"Introduce dos numeros (C++): \";\n    std::cin >> a >> b;\n    std::cout << \"Suma: \" << (a + b) << std::endl;\n    return 0;\n}\n"
+    },
+    {
+      "id": "text_2",
+      "type": "text",
+      "text": "Este bloque siguiente usa C puro y también es interactivo (scanf)."
+    },
+    {
+      "id": "code_2",
+      "type": "code",
+      "language": "c",
+      "code": "#include <stdio.h>\n\nint main(void) {\n    int a, b;\n    printf(\"Introduce dos numeros (C): \");\n    scanf(\"%d %d\", &a, &b);\n    printf(\"Producto: %d\\n\", a * b);\n    return 0;\n}\n"
+    }
+  ]
+}

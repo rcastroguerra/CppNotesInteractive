@@ -1,0 +1,15 @@
+{
+  "panels": [
+    {
+      "id": "text_1",
+      "type": "text",
+      "text": "ARCHIVO DE PRUEBA (estilo Colab)<br><br>- Este panel es solo texto (notas).<br>- El siguiente panel es C++: pide tu nombre y edad por teclado.<br>- El ultimo es C puro: calcula el area de un rectangulo.<br><br>Para ejecutar:<br>1. En la caja \"Entrada (stdin)\" del panel escribe los datos que pedira el programa.<br><span style=\"background-color: rgb(36, 37, 38); color: rgb(179, 179, 179);\">- C++: escribe tu nombre en una linea y tu edad en otra (p. ej. \"Maria\\n25\").</span><br>   - C: escribe base y altura separados por espacio (p. ej. \"5 7\").<br>2. Pulsa ▶ Ejecutar en cada panel, o ▶ Ejecutar todos.<br>3. La salida aparece justo debajo del panel."
+    },
+    {
+      "id": "code_mwrqo3q8ielh",
+      "type": "code",
+      "language": "cpp",
+      "code": "// Escribe aquí tu código C o C++\n#include <iostream>\n\nusing namespace std;\n\nint main() {\n    \n    si\n    cout << \"Hola, mundo\" << endl;\n    return 0;\n}"
+    }
+  ]
+}

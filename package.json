@@ -1,0 +1,95 @@
+{
+  "name": "cppnotesinteractive",
+  "displayName": "CppNotesInteractive",
+  "description": "Notebook-style editor for .cppnotes files with text panels (rich formatting) and code panels (C and C++) that compile and run, showing output below each panel — individually or all at once.",
+  "version": "0.2.0",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCustomEditor:cppnotes.editor",
+    "onCommand:cppnotes.runAll",
+    "onCommand:cppnotes.addTextPanel",
+    "onCommand:cppnotes.addCodePanel"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "cppnotes.editor",
+        "displayName": "CppNotesInteractive Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.cppnotes"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
+    "commands": [
+      {
+        "command": "cppnotes.runAll",
+        "title": "CppNotes: Run all blocks"
+      },
+      {
+        "command": "cppnotes.addTextPanel",
+        "title": "CppNotes: Add text panel"
+      },
+      {
+        "command": "cppnotes.addCodePanel",
+        "title": "CppNotes: Add code panel"
+      }
+    ],
+    "configuration": {
+      "title": "CppNotesInteractive",
+      "properties": {
+        "cppnotes.cCompiler": {
+          "type": "string",
+          "default": "gcc",
+          "description": "Compiler for C code panels (default gcc). Absolute path if not on PATH."
+        },
+        "cppnotes.cppCompiler": {
+          "type": "string",
+          "default": "g++",
+          "description": "Compiler for C++ code panels (default g++). Absolute path if not on PATH."
+        },
+        "cppnotes.cFlags": {
+          "type": "string",
+          "default": "-std=c11 -O2",
+          "description": "Extra flags for the C compiler."
+        },
+        "cppnotes.cppFlags": {
+          "type": "string",
+          "default": "-std=c++17 -O2",
+          "description": "Extra flags for the C++ compiler."
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "cppnotes",
+        "extensions": [
+          ".cppnotes"
+        ],
+        "aliases": [
+          "CppNotes"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0"
+  }
+}
